@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open-Estimate | The Future of Construction Estimating</title>
+    <title>Open-Estimate | Construction Estimating Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #030712; color: #f9fafb; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
@@ -11,11 +11,10 @@
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
+
+    <!-- Nav -->
     <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto w-full">
-        <div class="flex items-center space-x-3">
-            <img src="logo.png" alt="Open-Estimate Logo" class="w-10 h-10 rounded-lg">
-            <div class="text-2xl font-bold tracking-tight">Open<span class="text-blue-500">-</span>Estimate</div>
-        </div>
+        <div class="text-2xl font-bold tracking-tight">Open<span class="text-blue-500">-</span>Estimate</div>
         <div class="space-x-6 text-sm font-medium text-gray-400">
             <a href="https://app.openestimate.ai" class="hover:text-white transition">App</a>
             <a href="https://x.com/openestimate" class="hover:text-white transition">X</a>
@@ -24,37 +23,45 @@
     </nav>
 
     <main class="flex-grow flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-medium mb-8 mt-12">
+
+        <!-- Live badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-medium mb-10 mt-12">
             <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
             App is live — <a href="mailto:info@openestimate.ai" class="underline hover:text-green-300 transition">email info@openestimate.ai for access keys</a>
         </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
-            SaaS is <span class="gradient-text">Dead.</span>
+
+        <!-- Hero -->
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+            Pipeline &amp; Heavy Civil Estimating,<br>
+            <span class="gradient-text">Re-engineered.</span>
         </h1>
-        <p class="text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed">
-            LLMs have commoditized the interface. The mid-market doesn't need another expensive subscription.
-            It needs an industry standard for structured intelligence.
+        <p class="text-xl md:text-2xl text-gray-400 mb-6 leading-relaxed max-w-3xl">
+            An open-source estimating platform backed by a structured knowledge graph and an AI agent that learns from your historical project data — so every estimate you build is smarter than the last.
+        </p>
+        <p class="text-base text-gray-500 mb-14">
+            Built by people who have actually run crews, read bids, and paid for bad estimates.
         </p>
 
-        <p class="text-lg font-bold text-blue-500 uppercase tracking-widest mb-12">
-            Construction Estimating Software built by people who actually construct.
-        </p>
-
-        <div class="grid md:grid-cols-3 gap-6 text-left mb-16 w-full">
+        <!-- Three pillars -->
+        <div class="grid md:grid-cols-3 gap-6 text-left mb-14 w-full">
             <div class="p-8 bg-gray-900/50 rounded-2xl border border-gray-800">
-                <h3 class="text-xl font-bold mb-3 text-blue-400">The Tool (Free)</h3>
-                <p class="text-gray-400">Open-source estimating core. Atomic record model, open schema, Postgres-backed. Your data. Your format. Forever.</p>
+                <div class="text-xs font-bold uppercase tracking-widest text-blue-500 mb-3">Free &amp; Open Source</div>
+                <h3 class="text-xl font-bold mb-3">The Tool</h3>
+                <p class="text-gray-400 leading-relaxed">Atomic record model. Open schema. Portable data. Replace your $50K/year legacy stack without handing your data to a new landlord.</p>
             </div>
             <div class="p-8 bg-gray-900/50 rounded-2xl border border-gray-800">
-                <h3 class="text-xl font-bold mb-3 text-green-400">Jim (Data Layer)</h3>
-                <p class="text-gray-400">Turns your historical project data into a structured knowledge graph. Crew compositions, production rates, project DNA — captured once, available always.</p>
+                <div class="text-xs font-bold uppercase tracking-widest text-green-500 mb-3">Knowledge Layer</div>
+                <h3 class="text-xl font-bold mb-3">Jim</h3>
+                <p class="text-gray-400 leading-relaxed">Structures your historical project data into a living knowledge graph — crew compositions, production rates, cost codes. Captured once. Available on every future estimate.</p>
             </div>
             <div class="p-8 bg-gray-900/50 rounded-2xl border border-gray-800">
-                <h3 class="text-xl font-bold mb-3 text-purple-400">Jones (The Agent)</h3>
-                <p class="text-gray-400">AI estimating agent that reasons over your data to build estimates, optimize crews, and surface anomalies. Gets sharper with every project you complete.</p>
+                <div class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-3">AI Estimating Agent</div>
+                <h3 class="text-xl font-bold mb-3">Jones</h3>
+                <p class="text-gray-400 leading-relaxed">An AI agent that reasons over your data to build estimates, optimize crew compositions, and flag anomalies before they become problems in the field.</p>
             </div>
         </div>
 
+        <!-- CTAs -->
         <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-4">
             <a href="https://app.openestimate.ai" class="inline-block bg-white text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition">
                 Try the App
@@ -63,23 +70,25 @@
                 Join the Discord
             </a>
         </div>
-        <p class="text-sm text-gray-500 mb-12">Need access keys? <a href="mailto:info@openestimate.ai" class="text-blue-400 hover:underline">Email info@openestimate.ai</a></p>
+        <p class="text-sm text-gray-500 mb-16">Need access keys? <a href="mailto:info@openestimate.ai" class="text-blue-400 hover:underline">Email info@openestimate.ai</a></p>
 
-        <div class="max-w-2xl text-gray-400 border-t border-gray-900 pt-12 pb-12">
-            <h2 class="text-2xl font-bold text-white mb-4">A Call to Arms</h2>
+        <!-- Why we built this -->
+        <div class="max-w-2xl text-gray-400 border-t border-gray-800 pt-12 pb-12">
+            <h2 class="text-2xl font-bold text-white mb-4">Why We Built This</h2>
             <p class="mb-6 leading-relaxed text-left">
-                The massive estimating software firms have been rent-seeking for decades. They bill $400/hr to learn your business while locking your data in proprietary silos. We're done.
+                The major estimating platforms have been rent-seeking for decades. They charge $400/hr for implementation while locking your project data in proprietary silos you can't export without paying again.
             </p>
-            <p class="mb-6 leading-relaxed text-left font-bold text-white">
+            <p class="mb-6 leading-relaxed text-left font-semibold text-white">
                 We are building the open standard for the $12T construction industry.
             </p>
             <p class="leading-relaxed text-left">
-                If you are an estimator, developer, or data scientist who is tired of being extorted by legacy SaaS, join us in the Discord. We need domain experts to stress-test the math and builders to refactor the future.
+                If you're an estimator, project manager, or developer who is tired of working around tools that weren't built for how you actually work — join the Discord. We need domain experts to stress-test the math and builders to help shape the platform.
             </p>
         </div>
+
     </main>
 
-    <footer class="p-12 text-center text-gray-500 border-t border-gray-900 mt-20">
+    <footer class="p-12 text-center text-gray-500 border-t border-gray-900">
         <div class="max-w-2xl mx-auto space-y-4">
             <p class="text-sm uppercase tracking-widest font-bold text-gray-700">The Strategic Path</p>
             <div class="flex justify-center space-x-4 text-xs font-mono">
@@ -94,5 +103,6 @@
             <p>&copy; 2026 Open-Estimate. <a href="mailto:info@openestimate.ai" class="hover:underline">info@openestimate.ai</a></p>
         </div>
     </footer>
+
 </body>
 </html>
