@@ -16,117 +16,12 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        /* Jones demo panel */
-        .jones-panel {
-            background: #0d1117;
-            border: 1px solid #21262d;
-            border-radius: 12px;
-            overflow: hidden;
-            font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
-            font-size: 13px;
-        }
-        .jones-titlebar {
-            background: #161b22;
-            border-bottom: 1px solid #21262d;
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .jones-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .jones-body { padding: 20px; max-height: 520px; overflow-y: auto; }
-
-        .msg { margin-bottom: 16px; opacity: 0; transform: translateY(4px); transition: opacity 0.3s ease, transform 0.3s ease; }
-        .msg.visible { opacity: 1; transform: translateY(0); }
-
-        .user-bubble {
-            background: #1d4ed8;
-            color: #fff;
-            padding: 10px 14px;
-            border-radius: 12px 12px 4px 12px;
-            display: inline-block;
-            max-width: 85%;
-            line-height: 1.5;
-        }
-        .jones-label {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #8b949e;
-            margin-bottom: 6px;
-        }
-        .jones-text {
-            color: #c9d1d9;
-            line-height: 1.6;
-        }
-        .jones-text .ok  { color: #3fb950; }
-        .jones-text .warn { color: #d29922; }
-        .jones-text .dim  { color: #8b949e; }
-        .jones-text .num  { color: #79c0ff; }
-        .jones-text .head { color: #e6edf3; font-weight: 700; }
-
-        .wbs-block {
-            background: #161b22;
-            border: 1px solid #21262d;
-            border-radius: 8px;
-            padding: 12px 16px;
-            margin-top: 8px;
-        }
-        .wbs-line { padding: 3px 0; color: #c9d1d9; }
-        .wbs-line .code { color: #79c0ff; margin-right: 8px; }
-        .wbs-line .branch { color: #30363d; margin-right: 8px; }
-
-        .cost-table { width: 100%; margin-top: 8px; border-collapse: collapse; }
-        .cost-table td { padding: 5px 8px; color: #c9d1d9; }
-        .cost-table td:last-child { text-align: right; color: #79c0ff; }
-        .cost-table tr.total td { border-top: 1px solid #30363d; padding-top: 8px; font-weight: 700; color: #e6edf3; }
-        .cost-table tr.total td:last-child { color: #3fb950; }
-
-        .crew-block {
-            background: #161b22;
-            border: 1px solid #21262d;
-            border-radius: 8px;
-            padding: 12px 16px;
-            margin-top: 8px;
-        }
-        .crew-row { display: flex; justify-content: space-between; padding: 3px 0; color: #c9d1d9; }
-        .crew-row .role { color: #c9d1d9; }
-        .crew-row .rate { color: #8b949e; font-size: 12px; }
-
-        .typing-dots span {
-            display: inline-block;
-            width: 6px; height: 6px;
-            border-radius: 50%;
-            background: #8b949e;
-            margin: 0 2px;
-            animation: blink 1.2s infinite;
-        }
-        .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
-        .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
-        @keyframes blink {
-            0%, 80%, 100% { opacity: 0.2; transform: scale(1); }
-            40% { opacity: 1; transform: scale(1.2); }
-        }
-
-        /* Scroll fade on Jones panel */
-        .jones-fade { position: relative; }
-        .jones-fade::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 48px;
-            background: linear-gradient(transparent, #0d1117);
-            pointer-events: none;
-            border-radius: 0 0 12px 12px;
-        }
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
 
     <!-- Nav -->
-    <nav class="px-6 py-5 flex justify-between items-center max-w-7xl mx-auto w-full">
+    <nav class="px-6 py-5 flex justify-between items-center max-w-5xl mx-auto w-full">
         <div class="text-2xl font-bold tracking-tight">Open<span class="text-blue-500">-</span>Estimate</div>
         <div class="space-x-6 text-sm font-medium text-gray-400">
             <a href="https://app.openestimate.ai" class="hover:text-white transition">App</a>
@@ -135,123 +30,38 @@
         </div>
     </nav>
 
-    <main class="flex-grow w-full max-w-7xl mx-auto px-6">
+    <main class="flex-grow w-full max-w-5xl mx-auto px-6">
 
-        <!-- Hero — split layout -->
-        <div class="grid lg:grid-cols-2 gap-16 items-center pt-16 pb-24">
+        <!-- Hero -->
+        <div class="text-center pt-16 pb-20 max-w-3xl mx-auto">
 
-            <!-- Left: pitch -->
-            <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-medium mb-8">
-                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                    App is live — <a href="mailto:info@openestimate.ai" class="underline hover:text-green-300 transition ml-1">request access keys</a>
-                </div>
-
-                <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-                    Pipeline Estimating,<br>
-                    <span class="gradient-text">Re-engineered.</span>
-                </h1>
-
-                <p class="text-lg text-gray-400 mb-6 leading-relaxed">
-                    An open-source estimating platform backed by a structured knowledge graph and an AI agent that learns from your historical data — so every estimate you build is smarter than the last.
-                </p>
-
-                <p class="text-sm text-gray-600 mb-10">
-                    Built by people who have actually run crews, read bids, and paid for bad estimates.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 mb-4">
-                    <a href="https://app.openestimate.ai" class="inline-block bg-white text-black px-8 py-3.5 rounded-full font-bold text-base hover:bg-gray-200 transition text-center">
-                        Try the App
-                    </a>
-                    <a href="https://discord.gg/p78GnrFq" class="inline-block bg-blue-600 text-white px-8 py-3.5 rounded-full font-bold text-base hover:bg-blue-700 transition text-center">
-                        Join the Discord
-                    </a>
-                </div>
-                <p class="text-xs text-gray-600">Need access keys? <a href="mailto:info@openestimate.ai" class="text-blue-500 hover:underline">Email info@openestimate.ai</a></p>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-medium mb-8">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                App is live — <a href="mailto:info@openestimate.ai" class="underline hover:text-green-300 transition ml-1">request access keys</a>
             </div>
 
-            <!-- Right: Jones demo -->
-            <div class="jones-fade">
-                <div class="jones-panel shadow-2xl">
-                    <div class="jones-titlebar">
-                        <div class="jones-dot" style="background:#ff5f56"></div>
-                        <div class="jones-dot" style="background:#ffbd2e"></div>
-                        <div class="jones-dot" style="background:#27c93f"></div>
-                        <span style="color:#8b949e; font-size:12px; margin-left:8px; font-family: monospace;">Jones — Estimating Agent</span>
-                    </div>
-                    <div class="jones-body" id="jonesBody">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Pipeline Estimating,<br>
+                <span class="gradient-text">Re-engineered.</span>
+            </h1>
 
-                        <!-- Step 0: user prompt -->
-                        <div class="msg flex justify-end" id="s0">
-                            <div class="user-bubble">Build out a full estimate. 100km of NPS 48 for ATCO Pipelines near Edmonton AB.</div>
-                        </div>
+            <p class="text-xl text-gray-400 mb-6 leading-relaxed">
+                An open-source estimating platform backed by a structured knowledge graph and an AI agent that learns from your historical data — so every estimate you build is smarter than the last.
+            </p>
 
-                        <!-- Step 1: thinking dots -->
-                        <div class="msg" id="s1">
-                            <div class="jones-label">Jones</div>
-                            <div class="jones-text"><span class="typing-dots"><span></span><span></span><span></span></span></div>
-                        </div>
+            <p class="text-sm text-gray-600 mb-10">
+                Built by people who have actually run crews, read bids, and paid for bad estimates.
+            </p>
 
-                        <!-- Step 2: WBS -->
-                        <div class="msg" id="s2">
-                            <div class="jones-label">Jones</div>
-                            <div class="jones-text">
-                                <span class="ok">✓</span> WBS built — <span class="num">37 nodes</span> across 9 phases.<br>
-                                <div class="wbs-block" style="margin-top:10px;">
-                                    <div class="wbs-line"><span class="code">1000</span><span class="dim">Project Indirects</span></div>
-                                    <div class="wbs-line"><span class="code">2000</span><span class="dim">Right of Way &amp; Access</span><span style="color:#30363d; font-size:11px; margin-left:8px;">100km clearing, 80km access roads</span></div>
-                                    <div class="wbs-line"><span class="code">3000</span><span class="dim">Clearing &amp; Grading</span></div>
-                                    <div class="wbs-line"><span class="code">4000</span><span class="dim">Trenching</span><span style="color:#30363d; font-size:11px; margin-left:8px;">100,000m mainline + 5,000m rock</span></div>
-                                    <div class="wbs-line"><span class="code">5000</span><span class="dim">Pipe Installation</span><span style="color:#30363d; font-size:11px; margin-left:8px;">string / weld / coat / lower / backfill</span></div>
-                                    <div class="wbs-line"><span class="code">6000</span><span class="dim">Road &amp; Water Crossings</span><span style="color:#30363d; font-size:11px; margin-left:8px;">5 highway, 3 HDD, 25 minor water</span></div>
-                                    <div class="wbs-line"><span class="code">7000</span><span class="dim">Tie-Ins</span></div>
-                                    <div class="wbs-line"><span class="code">8000</span><span class="dim">Testing &amp; Commissioning</span></div>
-                                    <div class="wbs-line"><span class="code">9000</span><span class="dim">Cleanup &amp; Reclamation</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 3: crews -->
-                        <div class="msg" id="s3">
-                            <div class="jones-label">Jones</div>
-                            <div class="jones-text">
-                                <span class="ok">✓</span> All <span class="num">14 crews</span> built.<br>
-                                <div class="crew-block">
-                                    <div class="crew-row"><span class="role">TRENCH-01</span><span style="color:#8b949e; font-size:12px;">Mainline Trenching</span><span class="rate">2× Cat 345, Cat 336</span></div>
-                                    <div class="crew-row"><span class="role">WELD-01</span><span style="color:#8b949e; font-size:12px;">Mainline Welding</span><span class="rate">4× welding rigs, bus</span></div>
-                                    <div class="crew-row"><span class="role">LOWER-01</span><span style="color:#8b949e; font-size:12px;">Lowering-In &amp; Tie-On</span><span class="rate">4× Cat 583H/K sidebooms</span></div>
-                                    <div class="crew-row"><span class="role">BACKFILL-01</span><span style="color:#8b949e; font-size:12px;">Backfill</span><span class="rate">2× Cat 345, sheepsfoot</span></div>
-                                    <div class="crew-row"><span class="role">TEST-01</span><span style="color:#8b949e; font-size:12px;">Hydrostatic Test</span><span class="rate">test trailer, 2× 4" pumps</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 4: what's needed -->
-                        <div class="msg" id="s4">
-                            <div class="jones-label">Jones</div>
-                            <div class="jones-text">
-                                Crews and WBS are ready. Need production rates to generate assignments:<br>
-                                <div class="wbs-block" style="margin-top:8px;">
-                                    <div style="padding:4px 0; color:#c9d1d9;"><span class="code">5000.2</span>Mainline welding — NPS 48 Alberta prairie is typically <span class="num">18–24 joints/day</span> (~200–350 m/day per spread)</div>
-                                    <div style="padding:4px 0; color:#c9d1d9;"><span class="code">4000.1</span>Trenching — prairie soil: <span class="num">800–1,200 m/day</span></div>
-                                    <div style="padding:4px 0; color:#c9d1d9;"><span class="code">5000.4</span>Lowering-in — matches weld rate</div>
-                                    <div style="padding:4px 0; color:#c9d1d9;"><span class="code">5000.5</span>Backfill — <span class="num">800–1,500 m/day</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Step 5: flag -->
-                        <div class="msg" id="s5">
-                            <div class="jones-label">Jones</div>
-                            <div class="jones-text">
-                                Give me your production rates and a schedule start date and I'll generate the full assignment schedule.
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+                <a href="https://app.openestimate.ai" class="inline-block bg-white text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition">
+                    Try the App
+                </a>
+                <a href="https://discord.gg/p78GnrFq" class="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition">
+                    Join the Discord
+                </a>
             </div>
+            <p class="text-sm text-gray-600">Need access keys? <a href="mailto:info@openestimate.ai" class="text-blue-400 hover:underline">Email info@openestimate.ai</a></p>
 
         </div>
 
@@ -305,33 +115,6 @@
             <p>&copy; 2026 Open-Estimate. <a href="mailto:info@openestimate.ai" class="hover:underline">info@openestimate.ai</a></p>
         </div>
     </footer>
-
-    <script>
-        // Jones demo — sequential reveal
-        const steps = [
-            { id: 's0', delay: 600 },
-            { id: 's1', delay: 1800 },   // typing dots
-            { id: 's2', delay: 3200 },   // WBS (hide dots first)
-            { id: 's3', delay: 5800 },   // crew
-            { id: 's4', delay: 8400 },   // cost summary
-            { id: 's5', delay: 10600 },  // flag
-        ];
-
-        steps.forEach(({ id, delay }) => {
-            setTimeout(() => {
-                const el = document.getElementById(id);
-                if (el) el.classList.add('visible');
-                // hide typing dots when WBS arrives
-                if (id === 's2') {
-                    const dots = document.getElementById('s1');
-                    if (dots) dots.style.display = 'none';
-                }
-                // scroll to bottom of jones panel
-                const body = document.getElementById('jonesBody');
-                if (body) body.scrollTop = body.scrollHeight;
-            }, delay);
-        });
-    </script>
 
 </body>
 </html>
