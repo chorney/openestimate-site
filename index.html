@@ -3,274 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenEstimate.ai — Estimate at the Speed of Chat</title>
+    <title>Open-Estimate | The Future of Construction Estimating</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-text {
-            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-step-1 {
-            animation: fadeInUp 0.6s ease-out 0.5s forwards;
-            opacity: 0;
-        }
-        .animate-step-2 {
-            animation: fadeInUp 0.6s ease-out 2s forwards;
-            opacity: 0;
-        }
-        .animate-step-3 {
-            animation: fadeInUp 0.6s ease-out 4s forwards;
-            opacity: 0;
-        }
-        .animate-check {
-            animation: fadeInUp 0.4s ease-out forwards;
-            opacity: 0;
-        }
+        body { background-color: #030712; color: #f9fafb; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+        .gradient-text { background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-50 antialiased selection:bg-blue-500 selection:text-white">
-
-    <!-- Nav -->
-    <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
-        <div class="font-bold text-xl tracking-tight">OpenEstimate<span class="text-blue-500">.ai</span></div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
-            <a href="#features" class="hover:text-white transition">Features</a>
-            <a href="#philosophy" class="hover:text-white transition">Philosophy</a>
+<body class="flex flex-col min-h-screen">
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto w-full">
+        <div class="flex items-center space-x-3">
+            <img src="logo.png" alt="Open-Estimate Logo" class="w-10 h-10 rounded-lg">
+            <div class="text-2xl font-bold tracking-tight">Open<span class="text-blue-500">-</span>Estimate</div>
+        </div>
+        <div class="space-x-6 text-sm font-medium text-gray-400">
+            <a href="https://app.openestimate.ai" class="hover:text-white transition">App</a>
+            <a href="https://x.com/openestimate" class="hover:text-white transition">X</a>
+            <a href="mailto:info@openestimate.ai" class="hover:text-white transition underline">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="container mx-auto px-6 pt-20 pb-24 text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-medium text-blue-400 mb-8">
-            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-            v0.3.0 Alpha
+    <main class="flex-grow flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-medium mb-8 mt-12">
+            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+            App is live — <a href="mailto:info@openestimate.ai" class="underline hover:text-green-300 transition">email info@openestimate.ai for access keys</a>
         </div>
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-tight">
-            Estimate at the <br>
-            <span class="gradient-text">Speed of Chat</span>
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+            SaaS is <span class="gradient-text">Dead.</span>
         </h1>
-        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Stop renting access to your own estimates. OpenEstimate writes directly to <strong class="text-slate-200">your Google Sheets</strong>. No database lock-in. No export fees. You own the data forever.
+        <p class="text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed">
+            LLMs have commoditized the interface. The mid-market doesn't need another expensive subscription.
+            It needs an industry standard for structured intelligence.
         </p>
-        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <span class="text-sm text-slate-500">Open Source (MIT)</span>
-        </div>
-    </header>
 
-    <!-- Animated UI Preview -->
-    <div class="container mx-auto px-6 mb-32">
-        <div class="max-w-4xl mx-auto space-y-4">
-            
-            <!-- Step 1: User Input -->
-            <div class="animate-step-1 flex justify-center">
-                <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-xl max-w-2xl w-full relative">
-                    <div class="absolute -top-3 left-6 px-2 bg-slate-900 text-xs font-semibold text-slate-500 uppercase tracking-wider">User Input</div>
-                    <p class="text-lg text-white font-medium">"Add 6 welders to Mainline crew for 14 days starting Monday"</p>
-                </div>
+        <p class="text-lg font-bold text-blue-500 uppercase tracking-widest mb-12">
+            Construction Estimating Software built by people who actually construct.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 text-left mb-16 w-full">
+            <div class="p-8 bg-gray-900/50 rounded-2xl border border-gray-800">
+                <h3 class="text-xl font-bold mb-3 text-blue-400">The Tool (Free)</h3>
+                <p class="text-gray-400">Open-source estimating core. Atomic record model, open schema, Postgres-backed. Your data. Your format. Forever.</p>
             </div>
-
-            <!-- Arrow -->
-            <div class="animate-step-2 flex justify-center py-2">
-                <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            <div class="p-8 bg-gray-900/50 rounded-2xl border border-gray-800">
+                <h3 class="text-xl font-bold mb-3 text-green-400">Jim (Data Layer)</h3>
+                <p class="text-gray-400">Turns your historical project data into a structured knowledge graph. Crew compositions, production rates, project DNA — captured once, available always.</p>
             </div>
-
-            <!-- Step 2: AI Processing -->
-            <div class="animate-step-2 flex justify-center">
-                <div class="bg-slate-800/50 border border-blue-500/30 rounded-2xl p-6 shadow-xl max-w-2xl w-full relative">
-                    <div class="absolute -top-3 left-6 px-2 bg-slate-900 text-xs font-semibold text-blue-400 uppercase tracking-wider">AI Processing</div>
-                    <div class="space-y-2 text-slate-300 font-mono text-sm">
-                        <div class="flex items-center gap-3">
-                            <span class="text-green-400">✓</span> Parsed: Crew=Mainline, Role=Welder
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-green-400">✓</span> Duration: 14 days (96 work hours)
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-green-400">✓</span> Rate: $45/hr × 6 workers = $25,920
-                        </div>
-                        <div class="flex items-center gap-3 animate-pulse">
-                            <span class="text-blue-400">⚡</span> Structuring for Sheets...
-                        </div>
-                    </div>
-                </div>
+            <div class="p-8 bg-gray-900/50 rounded-2xl border border-gray-800">
+                <h3 class="text-xl font-bold mb-3 text-purple-400">Jones (The Agent)</h3>
+                <p class="text-gray-400">AI estimating agent that reasons over your data to build estimates, optimize crews, and surface anomalies. Gets sharper with every project you complete.</p>
             </div>
-
-            <!-- Arrow -->
-            <div class="animate-step-3 flex justify-center py-2">
-                <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-            </div>
-
-            <!-- Step 3: Google Sheets Output -->
-            <div class="animate-step-3 flex justify-center">
-                <div class="bg-white rounded-xl shadow-2xl max-w-3xl w-full overflow-hidden border border-slate-200">
-                    <div class="bg-green-600 px-4 py-2 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-2h2v2zm0-4H7v-2h2v2zm0-4H7V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>
-                        <span class="text-white font-medium text-sm">Mainline Estimate - Google Sheets</span>
-                    </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-sm text-left text-slate-800">
-                            <thead class="text-xs text-slate-500 uppercase bg-slate-50 border-b">
-                                <tr>
-                                    <th class="px-6 py-3">Crew</th>
-                                    <th class="px-6 py-3">Role</th>
-                                    <th class="px-6 py-3">Qty</th>
-                                    <th class="px-6 py-3">Days</th>
-                                    <th class="px-6 py-3 text-right">Cost</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="bg-green-50 border-b border-green-100">
-                                    <td class="px-6 py-4 font-medium">Mainline</td>
-                                    <td class="px-6 py-4">Welder</td>
-                                    <td class="px-6 py-4">6</td>
-                                    <td class="px-6 py-4">14</td>
-                                    <td class="px-6 py-4 text-right font-bold text-green-700">$25,920</td>
-                                </tr>
-                                <tr class="bg-white">
-                                    <td class="px-6 py-4 text-slate-400">...</td>
-                                    <td class="px-6 py-4 text-slate-400">...</td>
-                                    <td class="px-6 py-4 text-slate-400">...</td>
-                                    <td class="px-6 py-4 text-slate-400">...</td>
-                                    <td class="px-6 py-4 text-right text-slate-400">...</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-<!-- -->
-
-    <!-- The Three Pillars -->
-    <section id="features" class="container mx-auto px-6 py-20">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">The Three Pillars</h2>
-            <p class="text-xl text-slate-400">Why OpenEstimate is different from everything else on the market.</p>
         </div>
 
-        <div class="space-y-24">
-            
-            <!-- Pillar 1: Own Your Data -->
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <div class="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4">1. You Own Your Data</h3>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
-                        Your estimates shouldn't be held hostage in a proprietary database. OpenEstimate writes directly to <strong class="text-slate-200">Google Sheets</strong>.
-                    </p>
-                    <ul class="space-y-3 text-slate-400">
-                        <li class="flex gap-3"><span class="text-blue-500">✓</span> No export fees or lock-in</li>
-                        <li class="flex gap-3"><span class="text-blue-500">✓</span> Stop using us? Keep your data forever</li>
-                        <li class="flex gap-3"><span class="text-blue-500">✓</span> Edit manually anytime</li>
-                    </ul>
-                </div>
-                <div class="order-1 md:order-2 bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-                    <!-- Visual placeholder for Sheets -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-slate-200 opacity-90">
-                        <div class="bg-green-600 h-8 flex items-center px-4">
-                            <span class="text-white text-xs font-bold">My Estimate.xlsx</span>
-                        </div>
-                        <div class="p-4 space-y-2">
-                            <div class="h-4 bg-slate-100 rounded w-3/4"></div>
-                            <div class="h-4 bg-slate-100 rounded w-full"></div>
-                            <div class="h-4 bg-slate-100 rounded w-5/6"></div>
-                            <div class="h-4 bg-slate-100 rounded w-2/3"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pillar 2: AI Assisted -->
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
-                    <!-- Visual placeholder for Chat -->
-                    <div class="bg-slate-900 rounded-lg p-4 border border-slate-800 space-y-4">
-                        <div class="flex justify-end">
-                            <div class="bg-blue-600 text-white px-4 py-2 rounded-lg rounded-tr-none text-sm">
-                                Add a pipe gang for 3 weeks
-                            </div>
-                        </div>
-                        <div class="flex justify-start">
-                            <div class="bg-slate-800 text-slate-300 px-4 py-2 rounded-lg rounded-tl-none text-sm border border-slate-700">
-                                Done. Added Pipe Gang (28 workers) for 21 days. Cost: $142,800.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4">2. AI-Assisted Estimating</h3>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
-                        Stop filling out endless forms. Just tell the system what you need. It understands construction context, crews, and burn rates.
-                    </p>
-                    <ul class="space-y-3 text-slate-400">
-                        <li class="flex gap-3"><span class="text-purple-500">✓</span> Natural language input</li>
-                        <li class="flex gap-3"><span class="text-purple-500">✓</span> Context-aware logic</li>
-                        <li class="flex gap-3"><span class="text-purple-500">✓</span> Instant calculations</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Pillar 3: Schedule Integration -->
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <div class="w-16 h-16 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-400 mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4">3. Deep Schedule Integration</h3>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
-                        We are the only platform that natively integrates both <strong>Gantt Charts</strong> and <strong>March Charts</strong> (Time-Location diagrams).
-                    </p>
-                    <ul class="space-y-3 text-slate-400">
-                        <li class="flex gap-3"><span class="text-green-500">✓</span> Visual Linear Scheduling (March Charts)</li>
-                        <li class="flex gap-3"><span class="text-green-500">✓</span> Traditional Gantt views</li>
-                        <li class="flex gap-3"><span class="text-green-500">✓</span> Tied directly to your estimate costs</li>
-                    </ul>
-                </div>
-                <div class="order-1 md:order-2 bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 relative overflow-hidden">
-                    <!-- Visual placeholder for March Chart -->
-                    <div class="relative h-48 bg-slate-900 border border-slate-800 rounded-lg p-4">
-                        <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 20px 20px;"></div>
-                        <!-- March Chart Lines -->
-                        <div class="absolute bottom-4 left-4 w-1/3 h-1/3 border-t-2 border-r-2 border-red-500 rounded-tr-lg"></div>
-                        <div class="absolute bottom-12 left-12 w-1/3 h-1/2 border-t-2 border-r-2 border-blue-500 rounded-tr-lg"></div>
-                        <div class="absolute top-4 right-4 text-xs text-slate-500">Time-Location Diagram</div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-4">
+            <a href="https://app.openestimate.ai" class="inline-block bg-white text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition">
+                Try the App
+            </a>
+            <a href="https://discord.gg/p78GnrFq" class="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition">
+                Join the Discord
+            </a>
         </div>
-    </section>
+        <p class="text-sm text-gray-500 mb-12">Need access keys? <a href="mailto:info@openestimate.ai" class="text-blue-400 hover:underline">Email info@openestimate.ai</a></p>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 mt-20">
-        <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
-            <div>&copy; 2026 OpenEstimate.ai</div>
-            <div class="mt-4 md:mt-0">Powered by <a href="#" class="hover:text-blue-400">OpenClaw</a></div>
+        <div class="max-w-2xl text-gray-400 border-t border-gray-900 pt-12 pb-12">
+            <h2 class="text-2xl font-bold text-white mb-4">A Call to Arms</h2>
+            <p class="mb-6 leading-relaxed text-left">
+                The massive estimating software firms have been rent-seeking for decades. They bill $400/hr to learn your business while locking your data in proprietary silos. We're done.
+            </p>
+            <p class="mb-6 leading-relaxed text-left font-bold text-white">
+                We are building the open standard for the $12T construction industry.
+            </p>
+            <p class="leading-relaxed text-left">
+                If you are an estimator, developer, or data scientist who is tired of being extorted by legacy SaaS, join us in the Discord. We need domain experts to stress-test the math and builders to refactor the future.
+            </p>
+        </div>
+    </main>
+
+    <footer class="p-12 text-center text-gray-500 border-t border-gray-900 mt-20">
+        <div class="max-w-2xl mx-auto space-y-4">
+            <p class="text-sm uppercase tracking-widest font-bold text-gray-700">The Strategic Path</p>
+            <div class="flex justify-center space-x-4 text-xs font-mono">
+                <span>V1: SHEETS</span>
+                <span>→</span>
+                <span class="text-blue-500">V2: POSTGRES (NOW)</span>
+                <span>→</span>
+                <span>V3: LOCAL-FIRST</span>
+                <span>→</span>
+                <span>V4: CLOUD API</span>
+            </div>
+            <p>&copy; 2026 Open-Estimate. <a href="mailto:info@openestimate.ai" class="hover:underline">info@openestimate.ai</a></p>
         </div>
     </footer>
-
 </body>
 </html>
