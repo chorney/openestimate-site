@@ -184,7 +184,7 @@
 
                         <!-- Step 0: user prompt -->
                         <div class="msg flex justify-end" id="s0">
-                            <div class="user-bubble">Build a mainline spread estimate. 45km of 36-inch pipe, Class III terrain, northern Alberta.</div>
+                            <div class="user-bubble">Build out a full estimate. 100km of NPS 48 for ATCO Pipelines near Edmonton AB.</div>
                         </div>
 
                         <!-- Step 1: thinking dots -->
@@ -197,48 +197,46 @@
                         <div class="msg" id="s2">
                             <div class="jones-label">Jones</div>
                             <div class="jones-text">
-                                <span class="ok">✓</span> WBS structure set up.<br>
+                                <span class="ok">✓</span> WBS built — <span class="num">37 nodes</span> across 9 phases.<br>
                                 <div class="wbs-block" style="margin-top:10px;">
-                                    <div class="wbs-line"><span class="code">1000</span><span class="head">Mainline Spread — 45km</span></div>
-                                    <div class="wbs-line"><span class="branch">├─</span><span class="code">1100</span><span class="dim">ROW &amp; Clearing</span></div>
-                                    <div class="wbs-line"><span class="branch">├─</span><span class="code">1200</span><span class="dim">Pipe Gang</span></div>
-                                    <div class="wbs-line"><span class="branch">├─</span><span class="code">1300</span><span class="dim">Welding &amp; NDT</span></div>
-                                    <div class="wbs-line"><span class="branch">├─</span><span class="code">1400</span><span class="dim">Lowering &amp; Backfill</span></div>
-                                    <div class="wbs-line"><span class="branch">└─</span><span class="code">1500</span><span class="dim">Hydrotesting &amp; Tie-In</span></div>
+                                    <div class="wbs-line"><span class="code">1000</span><span class="dim">Project Indirects</span></div>
+                                    <div class="wbs-line"><span class="code">2000</span><span class="dim">Right of Way &amp; Access</span><span style="color:#30363d; font-size:11px; margin-left:8px;">100km clearing, 80km access roads</span></div>
+                                    <div class="wbs-line"><span class="code">3000</span><span class="dim">Clearing &amp; Grading</span></div>
+                                    <div class="wbs-line"><span class="code">4000</span><span class="dim">Trenching</span><span style="color:#30363d; font-size:11px; margin-left:8px;">100,000m mainline + 5,000m rock</span></div>
+                                    <div class="wbs-line"><span class="code">5000</span><span class="dim">Pipe Installation</span><span style="color:#30363d; font-size:11px; margin-left:8px;">string / weld / coat / lower / backfill</span></div>
+                                    <div class="wbs-line"><span class="code">6000</span><span class="dim">Road &amp; Water Crossings</span><span style="color:#30363d; font-size:11px; margin-left:8px;">5 highway, 3 HDD, 25 minor water</span></div>
+                                    <div class="wbs-line"><span class="code">7000</span><span class="dim">Tie-Ins</span></div>
+                                    <div class="wbs-line"><span class="code">8000</span><span class="dim">Testing &amp; Commissioning</span></div>
+                                    <div class="wbs-line"><span class="code">9000</span><span class="dim">Cleanup &amp; Reclamation</span></div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Step 3: crew from history -->
+                        <!-- Step 3: crews -->
                         <div class="msg" id="s3">
                             <div class="jones-label">Jones</div>
                             <div class="jones-text">
-                                <span class="ok">✓</span> Pulled crew from your Banister 36" project history. Production rate: <span class="num">280m/day</span>. Duration: <span class="num">161 working days</span>.<br>
+                                <span class="ok">✓</span> All <span class="num">14 crews</span> built.<br>
                                 <div class="crew-block">
-                                    <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#8b949e; margin-bottom:8px;">Pipe Gang — Phase 1200</div>
-                                    <div class="crew-row"><span class="role">Foreman</span><span>×1</span><span class="rate">$67/hr</span></div>
-                                    <div class="crew-row"><span class="role">Excavator Operator</span><span>×3</span><span class="rate">$62/hr</span></div>
-                                    <div class="crew-row"><span class="role">Sideboom Operator</span><span>×2</span><span class="rate">$62/hr</span></div>
-                                    <div class="crew-row"><span class="role">Labourer (Grade)</span><span>×10</span><span class="rate">$49/hr</span></div>
-                                    <div class="crew-row"><span class="role">HD Mechanic</span><span>×1</span><span class="rate">$68/hr</span></div>
+                                    <div class="crew-row"><span class="role">TRENCH-01</span><span style="color:#8b949e; font-size:12px;">Mainline Trenching</span><span class="rate">2× Cat 345, Cat 336</span></div>
+                                    <div class="crew-row"><span class="role">WELD-01</span><span style="color:#8b949e; font-size:12px;">Mainline Welding</span><span class="rate">4× welding rigs, bus</span></div>
+                                    <div class="crew-row"><span class="role">LOWER-01</span><span style="color:#8b949e; font-size:12px;">Lowering-In &amp; Tie-On</span><span class="rate">4× Cat 583H/K sidebooms</span></div>
+                                    <div class="crew-row"><span class="role">BACKFILL-01</span><span style="color:#8b949e; font-size:12px;">Backfill</span><span class="rate">2× Cat 345, sheepsfoot</span></div>
+                                    <div class="crew-row"><span class="role">TEST-01</span><span style="color:#8b949e; font-size:12px;">Hydrostatic Test</span><span class="rate">test trailer, 2× 4" pumps</span></div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Step 4: cost summary -->
+                        <!-- Step 4: what's needed -->
                         <div class="msg" id="s4">
                             <div class="jones-label">Jones</div>
                             <div class="jones-text">
-                                <span class="ok">✓</span> Direct cost summary:<br>
-                                <div class="wbs-block">
-                                    <table class="cost-table">
-                                        <tr><td>1100 · ROW &amp; Clearing</td><td>$1.4M</td></tr>
-                                        <tr><td>1200 · Pipe Gang</td><td>$5.3M</td></tr>
-                                        <tr><td>1300 · Welding &amp; NDT</td><td>$2.4M</td></tr>
-                                        <tr><td>1400 · Lowering &amp; Backfill</td><td>$1.7M</td></tr>
-                                        <tr><td>1500 · Hydrotesting &amp; Tie-In</td><td>$0.4M</td></tr>
-                                        <tr class="total"><td>Total Direct Cost</td><td>$11.2M</td></tr>
-                                    </table>
+                                Crews and WBS are ready. Need production rates to generate assignments:<br>
+                                <div class="wbs-block" style="margin-top:8px;">
+                                    <div style="padding:4px 0; color:#c9d1d9;"><span class="code">5000.2</span>Mainline welding — NPS 48 Alberta prairie is typically <span class="num">18–24 joints/day</span> (~200–350 m/day per spread)</div>
+                                    <div style="padding:4px 0; color:#c9d1d9;"><span class="code">4000.1</span>Trenching — prairie soil: <span class="num">800–1,200 m/day</span></div>
+                                    <div style="padding:4px 0; color:#c9d1d9;"><span class="code">5000.4</span>Lowering-in — matches weld rate</div>
+                                    <div style="padding:4px 0; color:#c9d1d9;"><span class="code">5000.5</span>Backfill — <span class="num">800–1,500 m/day</span></div>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +245,7 @@
                         <div class="msg" id="s5">
                             <div class="jones-label">Jones</div>
                             <div class="jones-text">
-                                <span class="warn">⚠</span> Phase 1300 has no equipment assigned. Your Banister spreads ran a welding track and generator set on that phase — might want to add that before you bid.
+                                Give me your production rates and a schedule start date and I'll generate the full assignment schedule.
                             </div>
                         </div>
 
