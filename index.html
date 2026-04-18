@@ -78,8 +78,29 @@
 
     <main class="flex-grow w-full max-w-5xl mx-auto px-6">
 
+        <!-- Beta banner (top of page) -->
+        <div class="beta-banner rounded-3xl p-10 md:p-14 mt-4 mb-12 text-center overflow-hidden">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 border border-purple-400/40 text-purple-200 text-xs font-bold uppercase tracking-[0.2em] mb-6 backdrop-blur">
+                <span class="w-2 h-2 rounded-full bg-pink-400 beta-dot"></span>
+                Just shipped
+            </div>
+            <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-4 leading-none">
+                <span class="beta-shimmer">Beta</span>
+                <span class="text-white"> is live.</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                A new command center for pipeline estimating — built around <span class="text-white font-semibold">Jones</span>, your AI co-pilot.
+            </p>
+            <div class="flex justify-center gap-6 mt-8 text-xs font-mono uppercase tracking-widest text-gray-500 flex-wrap">
+                <span class="text-blue-400">◆ AI co-pilot</span>
+                <span class="text-purple-400">◆ Monte Carlo</span>
+                <span class="text-pink-400">◆ Map-first intake</span>
+                <span class="text-green-400">◆ Auto review</span>
+            </div>
+        </div>
+
         <!-- Hero -->
-        <div class="text-center pt-16 pb-20 max-w-3xl mx-auto">
+        <div class="text-center pt-8 pb-20 max-w-3xl mx-auto">
 
             <div class="flex justify-center mb-8">
                 <img src="oe-logo.png" alt="Jones" class="w-32 h-32 rounded-2xl shadow-lg shadow-blue-500/20 object-cover">
@@ -117,26 +138,6 @@
 
         <!-- What's new in Beta -->
         <section class="border-t border-gray-800 pt-16 pb-20">
-            <div class="beta-banner rounded-3xl p-10 md:p-14 mb-12 text-center overflow-hidden">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/40 border border-purple-400/40 text-purple-200 text-xs font-bold uppercase tracking-[0.2em] mb-6 backdrop-blur">
-                    <span class="w-2 h-2 rounded-full bg-pink-400 beta-dot"></span>
-                    Just shipped
-                </div>
-                <h2 class="text-6xl md:text-8xl font-black tracking-tighter mb-4 leading-none">
-                    <span class="beta-shimmer">Beta</span>
-                    <span class="text-white"> is live.</span>
-                </h2>
-                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                    A new command center for pipeline estimating — built around <span class="text-white font-semibold">Jones</span>, your AI co-pilot.
-                </p>
-                <div class="flex justify-center gap-6 mt-8 text-xs font-mono uppercase tracking-widest text-gray-500 flex-wrap">
-                    <span class="text-blue-400">◆ AI co-pilot</span>
-                    <span class="text-purple-400">◆ Monte Carlo</span>
-                    <span class="text-pink-400">◆ Map-first intake</span>
-                    <span class="text-green-400">◆ Auto review</span>
-                </div>
-            </div>
-
             <!-- Lead -->
             <div class="max-w-3xl mx-auto p-8 bg-gray-900/50 rounded-2xl border border-gray-800 mb-6">
                 <h3 class="text-2xl font-bold mb-3">Jones, your estimating co-pilot.</h3>
@@ -236,17 +237,7 @@
     </main>
 
     <footer class="p-12 text-center text-gray-500 border-t border-gray-900">
-        <div class="max-w-2xl mx-auto space-y-4">
-            <p class="text-sm uppercase tracking-widest font-bold text-gray-700">The Strategic Path</p>
-            <div class="flex justify-center space-x-4 text-xs font-mono flex-wrap gap-y-1">
-                <span>V1: SHEETS</span>
-                <span>→</span>
-                <span class="text-blue-500">V2: POSTGRES (NOW)</span>
-                <span>→</span>
-                <span>V3: LOCAL-FIRST</span>
-                <span>→</span>
-                <span>V4: CLOUD API</span>
-            </div>
+        <div class="max-w-2xl mx-auto">
             <p>&copy; 2026 Open-Estimate. <a href="mailto:info@openestimate.ai" class="hover:underline">info@openestimate.ai</a></p>
         </div>
     </footer>
